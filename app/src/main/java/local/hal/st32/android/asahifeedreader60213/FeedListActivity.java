@@ -22,7 +22,7 @@ public class FeedListActivity extends AppCompatActivity {
 
     private Handler handler;
     private ListView rssList;
-    private final String RSS_URL = "http://www3.asahi.com/rss/index.rdf";
+    private final String RSS_URL = "http://rss.asahi.com/rss/asahi/newsheadlines.rdf";
     private String RssText;
     List<Item> itemList = new ArrayList<Item>();
 

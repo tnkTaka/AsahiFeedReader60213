@@ -27,13 +27,13 @@ public class RssParse {
 
         StringBuilder sb = new StringBuilder();
 
-        AndroidHttpClient client = AndroidHttpClient.newInstance("TEST");
+        AndroidHttpClient client = AndroidHttpClient.newInstance("RssFeed");
         HttpGet get = new HttpGet(url);
 
         try{
             // リクエストを取得
             HttpResponse response = client.execute(get);
-
+            Log.d("sample" ,""+response);
             BufferedReader br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
             String line = null;
             while((line = br.readLine()) != null){
@@ -106,7 +106,7 @@ public class RssParse {
                             item.setTitle(data);
                             fieldName = "";
                         }
-                        if(fieldName.equals("pubDate")){
+                        if(fieldName.equals("date")){
                             Log.d("sample", "pubDate = "+ data);
                             item.setPubDate(data);
                             fieldName = "";
@@ -120,7 +120,7 @@ public class RssParse {
 
                 }
                 eventType = xmlPullParser.next();
-            }
+        }
 
         } catch (Exception e) {
             Log.d("sample", "Error");

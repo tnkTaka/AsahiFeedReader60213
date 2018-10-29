@@ -34,7 +34,7 @@ public class RowItemAdapter extends ArrayAdapter {
         text1.setText(detail.getTitle());
 
         TextView text2 = (TextView)convertView.findViewById(R.id.textView2);
-        text2.setText(detail.getLink());
+        text2.setText(detail.getPubDate());
 
         // 返却
         return convertView;
