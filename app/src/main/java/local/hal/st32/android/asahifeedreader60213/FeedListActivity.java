@@ -75,8 +75,10 @@ public class FeedListActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
+                            Log.d("sample","GetRSS");
                             // URLよりRSSを取得
                             RssText = RssParse.getRss(FeedListActivity.this, RSS_URL);
+                            Log.d("sample",RssText);
                             itemList = RssParse.parse(RssText);
 
                             // handler
