@@ -17,7 +17,7 @@ public class FeedDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_detail);
 
-        // webview
+        // WebView
         webView = (WebView)findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
 

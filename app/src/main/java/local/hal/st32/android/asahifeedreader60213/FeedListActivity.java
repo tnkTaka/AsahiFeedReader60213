@@ -1,6 +1,5 @@
 package local.hal.st32.android.asahifeedreader60213;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -75,7 +74,6 @@ public class FeedListActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            Log.d("sample","GetRSS");
                             // URLよりRSSを取得
                             RssText = RssParse.getRss(FeedListActivity.this, RSS_URL);
                             Log.d("sample",RssText);
@@ -93,7 +91,7 @@ public class FeedListActivity extends AppCompatActivity {
                             });
 
                         } catch (Exception e) {
-                            Log.d("sample", e.getMessage());
+                            Log.e("Exception", e.getMessage());
                         }
                     }
                 };
