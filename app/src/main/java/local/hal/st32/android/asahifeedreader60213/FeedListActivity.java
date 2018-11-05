@@ -76,7 +76,6 @@ public class FeedListActivity extends AppCompatActivity {
                         try {
                             // URLよりRSSを取得
                             RssText = RssParse.getRss(FeedListActivity.this, RSS_URL);
-                            Log.d("sample",RssText);
                             itemList = RssParse.parse(RssText);
 
                             // handler
